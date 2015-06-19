@@ -15,7 +15,7 @@ Vagrant.configure(2) do |config|
     node.hostmanager.aliases = [ project_name + ".local", "www." + project_name + ".local" ]
   end
 
-  config.vm.synced_folder "Data/", "/Data" #, type: "rsync", rsync__exclude: ".git/", rsync__auto:true
+  config.vm.synced_folder "Data/", "/Data"
   config.vm.provision :shell, :path => "updateOS.sh"
 
 end
